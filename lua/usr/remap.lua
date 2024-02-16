@@ -15,6 +15,9 @@ vim.keymap.set("n", "<leader>h", "<C-w>h")
 vim.keymap.set("n", "<leader>c", "<C-w>c")
 vim.keymap.set("n", "<leader>v", "<C-w>v")
 
+vim.keymap.set("", "<C-k>", "{")
+vim.keymap.set("", "<C-j>", "}")
+
 
 
 

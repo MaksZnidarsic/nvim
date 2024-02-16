@@ -7,7 +7,7 @@ lsp.preset("recommended")
 
 lsp.ensure_installed({
     'clangd',
-    'rust_analyzer',
+    'pylsp'
 })
 
 lsp.setup()

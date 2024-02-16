@@ -1,7 +1,6 @@
 
 
 
-
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
@@ -28,7 +27,6 @@ return require('packer').startup(function(use)
             end,
             },
             {'williamboman/mason-lspconfig.nvim'}, -- Optional
-
             -- Autocompletion
             {'hrsh7th/nvim-cmp'},     -- Required
             {'hrsh7th/cmp-nvim-lsp'}, -- Required
@@ -37,7 +35,6 @@ return require('packer').startup(function(use)
     }
 
     --color
-    use { 'nikolvs/vim-sunbather', as = 'sunbather' }
     use { 'sts10/vim-pink-moon' }
     use { 'wojciechkepka/vim-github-dark' }
     use { 'rose-pine/neovim', as = 'rose-pine' }

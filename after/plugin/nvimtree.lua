@@ -27,8 +27,8 @@ require("nvim-tree").setup{
             glyphs = {
                 modified = "*",
                 folder = {
-                    default = "▸",
-                    open = "▾",
+                    default = ">",
+                    open = "v",
                     empty = "~",
                     empty_open = "~",
                 },
