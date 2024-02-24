@@ -68,36 +68,43 @@ require('mason-lspconfig').setup({
 require("nvim-tree").setup{
     sort_by = "case_sensitive",
     view = {
-        width = 30,
-        number = false,
+        width = 32,
+        number = true,
+        relativenumber = true,
     },
     renderer = {
-        add_trailing = true,
         group_empty = true,
-        indent_width = 2,
-        indent_markers = {
-            inline_arrows = true,
-        },
         icons = {
-            webdev_colors = false,
             padding = " ",
+            git_placement = 'after',
             show = {
                 file = false,
                 folder = true,
                 folder_arrow = false,
-                git = false,
-                modified = true,
+                git = true,
+                modified = false,
             },
             glyphs = {
-                modified = "*",
                 folder = {
                     default = ">",
                     open = "v",
                     empty = "~",
                     empty_open = "~",
                 },
+                git = {
+                    unstaged = "x", --excluded
+                    staged = "a", --added
+                    unmerged = "m",
+                    renamed = "r",
+                    untracked = "u",
+                    deleted = "d",
+                    ignored = "i",
+                },
             },
         },
+    },
+    filters = {
+        git_ignored = false
     },
 }
 
