@@ -6,14 +6,14 @@ vim.g.maplocalleader = ' '
 
 local lazypath = vim.fn.stdpath('data') .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable", -- latest stable release
+        lazypath,
+    })
 end
 vim.opt.rtp:prepend(lazypath)
 
@@ -21,6 +21,7 @@ local plugins = {
     { 'nvim-telescope/telescope.nvim', tag = '0.1.5',
     	dependencies = { 'nvim-lua/plenary.nvim' } },
     { 'kyazdani42/nvim-tree.lua' },
+    { 'CRAG666/betterTerm.nvim' },
     --lsp_zero
     { 'williamboman/mason.nvim' },
     { 'williamboman/mason-lspconfig.nvim' },
@@ -30,9 +31,10 @@ local plugins = {
     { 'hrsh7th/nvim-cmp' },
     { 'L3MON4D3/LuaSnip' },
     --color
-    'sts10/vim-pink-moon',
-    'wojciechkepka/vim-github-dark',
-    { 'rose-pine/neovim', as = 'rose-pine' }
+    { "catppuccin/nvim", name = "catppuccin" },
+    { 'sts10/vim-pink-moon' },
+    { 'wojciechkepka/vim-github-dark' },
+    { 'rose-pine/neovim', as = 'rose-pine' },
 }
 
 local opts = {}
@@ -41,9 +43,18 @@ require('lazy').setup(plugins, opts)
 
 
 --telescope--
-
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>f', builtin.find_files, {})
+
+
+--terminal--
+local betterTerm = require('betterTerm')
+betterTerm.setup({
+  startInserted = true,
+  position = "bot",
+  size = 17
+})
+vim.keymap.set('n', '<leader>t', betterTerm.open, {})
 
 
 --lsp_zero--
@@ -51,7 +62,7 @@ vim.keymap.set('n', '<leader>f', builtin.find_files, {})
 local lsp_zero = require("lsp-zero")
 
 lsp_zero.on_attach(function(client, bufnr)
-	lsp_zero.default_keymaps({buffer = bufnr})
+    lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
 require('mason').setup({})
@@ -75,14 +86,11 @@ require("nvim-tree").setup{
     renderer = {
         group_empty = true,
         icons = {
-            padding = " ",
-            git_placement = 'after',
             show = {
                 file = false,
                 folder = true,
                 folder_arrow = false,
-                git = true,
-                modified = false,
+                git = false,
             },
             glyphs = {
                 folder = {
@@ -91,20 +99,11 @@ require("nvim-tree").setup{
                     empty = "~",
                     empty_open = "~",
                 },
-                git = {
-                    unstaged = "x", --excluded
-                    staged = "a", --added
-                    unmerged = "m",
-                    renamed = "r",
-                    untracked = "u",
-                    deleted = "d",
-                    ignored = "i",
-                },
             },
         },
     },
     filters = {
-        git_ignored = false
+        git_ignored = true
     },
 }
 
@@ -112,8 +111,9 @@ require("nvim-tree").setup{
 --color_scheme--
 
 --vim.cmd.colorscheme('ghdark')
-vim.cmd.colorscheme('rose-pine')
+--vim.cmd.colorscheme('rose-pine')
 --vim.cmd.colorscheme('pink-moon')
+vim.cmd.colorscheme('catppuccin')
 
 
 
