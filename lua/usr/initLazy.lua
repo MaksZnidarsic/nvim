@@ -67,12 +67,24 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-	ensure_installed = {},
-	handlers = {
-		lsp_zero.default_setup,
-	},
+    ensure_installed = {
+        'clangd', 'cmake', 'texlab', 'pylsp'
+    },
+    handlers = {
+        lsp_zero.default_setup,
+    },
 })
 
+require('lspconfig').pylsp.setup({
+    plugins = {
+        flake8 = { enabled = false },
+        black = {enabled = true},
+        autopep8 = { enabled = false },
+        mccabe = { enabled = false },
+        pycodestyle = { enabled = false },
+        pyflakes = { enabled = false },
+    }
+})
 
 --nvim_tree--
 
