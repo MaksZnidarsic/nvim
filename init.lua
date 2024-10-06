@@ -52,6 +52,7 @@ vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', {})
 
 vim.keymap.set('', '<C-k>', '{', {})
 vim.keymap.set('', '<C-j>', '}', {})
+vim.keymap.set('n', 'K', 'kddpkJ', {})
 
 
 --lazy--
@@ -83,7 +84,7 @@ local plugins = {
     { 'L3MON4D3/LuaSnip' },
     --color--
     { "catppuccin/nvim", name = "catppuccin" },
-    { 'sts10/vim-pink-moon' },
+    { 'sts11/vim-pink-moon' },
     { 'wojciechkepka/vim-github-dark' },
     { 'rose-pine/neovim', as = 'rose-pine' },
 }
@@ -96,6 +97,7 @@ require('lazy').setup(plugins, opts)
 --telescope--
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>f', builtin.find_files, {})
+vim.keymap.set('n', '<leader>g', builtin.live_grep, {})
 
 
 --nvim-tree--

@@ -1,2 +1,1 @@
-# NVIM
-Set up for neovim
+# nvim
