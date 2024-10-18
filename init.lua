@@ -84,9 +84,8 @@ local plugins = {
     { 'L3MON4D3/LuaSnip' },
     --color--
     { "catppuccin/nvim", name = "catppuccin" },
-    { 'sts11/vim-pink-moon' },
-    { 'wojciechkepka/vim-github-dark' },
     { 'rose-pine/neovim', as = 'rose-pine' },
+    { 'rebelot/kanagawa.nvim' },
 }
 
 local opts = {}
@@ -138,16 +137,9 @@ require('mason-lspconfig').setup({
     },
 })
 
+
 --color_scheme--
 
---vim.cmd.colorscheme('ghdark')
+--vim.cmd.colorscheme('catppuccin')
 --vim.cmd.colorscheme('rose-pine')
---vim.cmd.colorscheme('pink-moon')
-vim.cmd.colorscheme('catppuccin')
-
-
-
-
-
-
-
+vim.cmd.colorscheme('kanagawa-wave')
