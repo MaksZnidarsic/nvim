@@ -38,8 +38,6 @@ vim.g.maplocalleader = ' '
 vim.keymap.set('n', '<leader>q', ':q<CR>', {})
 vim.keymap.set('n', '<leader>Q', ':wa<CR>:qa!<CR>', {})
 
-vim.keymap.set('n', '<leader>e', vim.cmd.NvimTreeFocus, {})
-
 vim.keymap.set('n', '<leader>l', '<C-w>l', {})
 vim.keymap.set('n', '<leader>h', '<C-w>h', {})
 vim.keymap.set('n', '<leader>k', '<C-w>k', {})
@@ -56,7 +54,6 @@ vim.keymap.set('n', 'K', 'kddpkJ', {})
 
 
 --lazy--
-
 local lazypath = vim.fn.stdpath('data') .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
     vim.fn.system({
@@ -83,8 +80,8 @@ local plugins = {
     { 'hrsh7th/nvim-cmp' },
     { 'L3MON4D3/LuaSnip' },
     --color--
-    { "catppuccin/nvim", name = "catppuccin" },
-    { 'rose-pine/neovim', as = 'rose-pine' },
+    --{ "catppuccin/nvim", name = "catppuccin" },
+    --{ 'rose-pine/neovim', as = 'rose-pine' },
     { 'rebelot/kanagawa.nvim' },
 }
 
@@ -100,7 +97,6 @@ vim.keymap.set('n', '<leader>g', builtin.live_grep, {})
 
 
 --nvim-tree--
-
 require("nvim-tree").setup({
     sort = { sorter = "case_sensitive", },
     view = { width = 10000 },
@@ -118,9 +114,10 @@ require("nvim-tree").setup({
     },
 })
 
+vim.keymap.set('n', '<leader>e', vim.cmd.NvimTreeFocus, {})
+
 
 --lsp_zero--
-
 local lsp_zero = require("lsp-zero")
 
 lsp_zero.on_attach(function(client, bufnr)
@@ -130,7 +127,7 @@ end)
 require('mason').setup({})
 require('mason-lspconfig').setup({
     ensure_installed = {
-        'clangd', 'cmake', 'texlab'
+        --'clangd', 'cmake', 'texlab'
     },
     handlers = {
         lsp_zero.default_setup,
