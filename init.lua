@@ -1,6 +1,13 @@
 
 
 
+--                           _         
+--    ____  ___  ____ _   __(_)___ ___ 
+--   / __ \/ _ \/ __ \ | / / / __ `__ \
+--  / / / /  __/ /_/ / |/ / / / / / / /
+-- /_/ /_/\___/\____/|___/_/_/ /_/ /_/ 
+
+
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
@@ -16,7 +23,6 @@ vim.opt.smartindent = true
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
-
 vim.opt.expandtab = true
 
 vim.opt.hlsearch = false 
@@ -35,8 +41,7 @@ vim.opt.colorcolumn = '100'
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-vim.keymap.set('n', '<leader>q', ':q<CR>', {})
-vim.keymap.set('n', '<leader>Q', ':wa<CR>:qa!<CR>', {})
+vim.keymap.set('n', '<leader>q', ':wa<CR>:qa!<CR>', {})
 
 vim.keymap.set('n', '<leader>l', '<C-w>l', {})
 vim.keymap.set('n', '<leader>h', '<C-w>h', {})
@@ -54,23 +59,28 @@ vim.keymap.set('n', 'K', 'kddpkJ', {})
 
 
 --lazy--
-local lazypath = vim.fn.stdpath('data') .. "/lazy/lazy.nvim"
+
+local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
     vim.fn.system({
-        "git",
-        "clone",
-        "--filter=blob:none",
-        "https://github.com/folke/lazy.nvim.git",
-        "--branch=stable", -- latest stable release
+        'git',
+        'clone',
+        '--filter=blob:none',
+        'https://github.com/folke/lazy.nvim.git',
+        '--branch=stable', -- latest stable release
         lazypath,
     })
 end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
+    --telescope--
     { 'nvim-telescope/telescope.nvim', tag = '0.1.5',
         dependencies = { 'nvim-lua/plenary.nvim' } },
+
+    --nvim-tree--
     { 'nvim-tree/nvim-tree.lua' },
+
     --lsp_zero--
     { 'williamboman/mason.nvim' },
     { 'williamboman/mason-lspconfig.nvim' },
@@ -79,10 +89,9 @@ local plugins = {
     { 'hrsh7th/cmp-nvim-lsp' },
     { 'hrsh7th/nvim-cmp' },
     { 'L3MON4D3/LuaSnip' },
+
     --color--
-    --{ "catppuccin/nvim", name = "catppuccin" },
-    --{ 'rose-pine/neovim', as = 'rose-pine' },
-    { 'rebelot/kanagawa.nvim' },
+    { "catppuccin/nvim", name = "catppuccin" },
 }
 
 local opts = {}
@@ -91,12 +100,14 @@ require('lazy').setup(plugins, opts)
 
 
 --telescope--
+
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>f', builtin.find_files, {})
 vim.keymap.set('n', '<leader>g', builtin.live_grep, {})
 
 
 --nvim-tree--
+
 require("nvim-tree").setup({
     sort = { sorter = "case_sensitive", },
     view = { width = 10000 },
@@ -118,6 +129,7 @@ vim.keymap.set('n', '<leader>e', vim.cmd.NvimTreeFocus, {})
 
 
 --lsp_zero--
+
 local lsp_zero = require("lsp-zero")
 
 lsp_zero.on_attach(function(client, bufnr)
@@ -135,8 +147,10 @@ require('mason-lspconfig').setup({
 })
 
 
---color_scheme--
+--colorscheme--
 
---vim.cmd.colorscheme('catppuccin')
---vim.cmd.colorscheme('rose-pine')
-vim.cmd.colorscheme('kanagawa-wave')
+require("catppuccin").setup({
+    flavour = "mocha",
+})
+
+vim.cmd.colorscheme('catppuccin')
