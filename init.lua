@@ -78,8 +78,11 @@ local plugins = {
     { 'nvim-telescope/telescope.nvim', tag = '0.1.5',
         dependencies = { 'nvim-lua/plenary.nvim' } },
 
+    --oil.nvim--
+    { 'stevearc/oil.nvim' },
+
     --nvim-tree--
-    { 'nvim-tree/nvim-tree.lua' },
+    --{ 'nvim-tree/nvim-tree.lua' },
 
     --lsp_zero--
     { 'williamboman/mason.nvim' },
@@ -106,8 +109,39 @@ vim.keymap.set('n', '<leader>f', builtin.find_files, {})
 vim.keymap.set('n', '<leader>g', builtin.live_grep, {})
 
 
---nvim-tree--
+--oil.nvim--
 
+require('oil').setup({
+    watch_for_changes = true,
+    view_options = {
+        show_hidden = true
+    },
+    columns = {
+        "size"
+    },
+    keymaps = {
+        ["<CR>"] = "actions.select",
+        ["<C-s>"] = { "actions.select", opts = { vertical = true } },
+        ["<C-h>"] = { "actions.select", opts = { horizontal = true } },
+        ["<C-t>"] = { "actions.select", opts = { tab = true } },
+        ["<C-p>"] = "actions.preview",
+        ["<C-c>"] = { "actions.close", mode = "n" },
+        ["<C-l>"] = "actions.refresh",
+        ["-"] = { "actions.parent", mode = "n" },
+        ["_"] = { "actions.open_cwd", mode = "n" },
+        ["`"] = { "actions.cd", mode = "n" },
+        ["~"] = { "actions.cd", opts = { scope = "tab" }, mode = "n" },
+        ["gs"] = { "actions.change_sort", mode = "n" },
+        ["<C-o>"] = "actions.open_external",
+        ["g."] = { "actions.toggle_hidden", mode = "n" },
+        ["g\\"] = { "actions.toggle_trash", mode = "n" },
+    }
+})
+vim.keymap.set('n', '<leader>e', vim.cmd.Oil, {})
+
+
+--nvim-tree--
+--[[
 require("nvim-tree").setup({
     sort = { sorter = "case_sensitive", },
     view = { width = 10000 },
@@ -126,6 +160,7 @@ require("nvim-tree").setup({
 })
 
 vim.keymap.set('n', '<leader>e', vim.cmd.NvimTreeFocus, {})
+--]]
 
 
 --lsp_zero--
