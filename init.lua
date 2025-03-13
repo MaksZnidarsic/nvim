@@ -81,9 +81,6 @@ local plugins = {
     --oil.nvim--
     { 'stevearc/oil.nvim' },
 
-    --nvim-tree--
-    --{ 'nvim-tree/nvim-tree.lua' },
-
     --lsp_zero--
     { 'williamboman/mason.nvim' },
     { 'williamboman/mason-lspconfig.nvim' },
@@ -132,35 +129,12 @@ require('oil').setup({
         ["`"] = { "actions.cd", mode = "n" },
         ["~"] = { "actions.cd", opts = { scope = "tab" }, mode = "n" },
         ["gs"] = { "actions.change_sort", mode = "n" },
-        ["<C-o>"] = "actions.open_external",
+        ["<C-CR>"] = "actions.open_external",
         ["g."] = { "actions.toggle_hidden", mode = "n" },
         ["g\\"] = { "actions.toggle_trash", mode = "n" },
     }
 })
 vim.keymap.set('n', '<leader>e', vim.cmd.Oil, {})
-
-
---nvim-tree--
---[[
-require("nvim-tree").setup({
-    sort = { sorter = "case_sensitive", },
-    view = { width = 10000 },
-    filters = { dotfiles = false, },
-    actions = { open_file = { quit_on_open = true, }, },
-    renderer = {
-        icons = {
-            show = { file = false, folder = true, folder_arrow = false, git = false },
-            glyphs = {
-                folder = { default = '/', open = '/', empty = '~', empty_open = '~' },
-                bookmark = '|',
-            },
-            padding = "",
-        },
-    },
-})
-
-vim.keymap.set('n', '<leader>e', vim.cmd.NvimTreeFocus, {})
---]]
 
 
 --lsp_zero--
