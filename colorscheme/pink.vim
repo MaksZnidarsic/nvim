@@ -18,9 +18,9 @@ set t_Co=256
 
 hi ColorColumn      guisp=NONE guifg=NONE    guibg=#574a6b ctermfg=NONE ctermbg=240  gui=NONE cterm=NONE
 hi Conceal          guisp=NONE guifg=#ffffff guibg=NONE    ctermfg=231  ctermbg=NONE gui=NONE cterm=NONE
-hi Cursor           guisp=NONE guifg=#100b12 guibg=#ffffff ctermfg=233  ctermbg=231  gui=NONE cterm=NONE
-hi lCursor          guisp=NONE guifg=#100b12 guibg=#ffffff ctermfg=233  ctermbg=231  gui=NONE cterm=NONE
-hi CursorIM         guisp=NONE guifg=#100b12 guibg=#ffffff ctermfg=233  ctermbg=231  gui=NONE cterm=NONE
+hi Cursor           guisp=NONE guifg=#000000 guibg=#ffffff ctermfg=233  ctermbg=231  gui=NONE cterm=NONE
+hi lCursor          guisp=NONE guifg=#000000 guibg=#ffffff ctermfg=233  ctermbg=231  gui=NONE cterm=NONE
+hi CursorIM         guisp=NONE guifg=#000000 guibg=#ffffff ctermfg=233  ctermbg=231  gui=NONE cterm=NONE
 hi CursorColumn     guisp=NONE guifg=#ffffff guibg=NONE    ctermfg=231  ctermbg=NONE gui=NONE cterm=NONE
 hi CursorLine       guisp=NONE guifg=#ffffff guibg=NONE    ctermfg=231  ctermbg=NONE gui=NONE cterm=NONE
 hi Directory        guisp=NONE guifg=#b198d9 guibg=NONE    ctermfg=140  ctermbg=NONE gui=NONE cterm=NONE
@@ -64,14 +64,14 @@ hi TabLineFill      guisp=NONE guifg=#ffffff guibg=NONE    ctermfg=231  ctermbg=
 hi TabLineSel       guisp=NONE guifg=#ffffff guibg=NONE    ctermfg=231  ctermbg=NONE gui=NONE cterm=NONE
 hi Terminal         guisp=NONE guifg=#ffffff guibg=NONE    ctermfg=231  ctermbg=NONE gui=NONE cterm=NONE
 hi Title            guisp=NONE guifg=#ffffff guibg=NONE    ctermfg=231  ctermbg=NONE gui=NONE cterm=NONE
-hi Visual           guisp=NONE guifg=NONE    guibg=#171019 ctermfg=NONE ctermbg=240  gui=NONE cterm=NONE
-hi VisualNOS        guisp=NONE guifg=NONE    guibg=#171019 ctermfg=NONE ctermbg=240  gui=NONE cterm=NONE
+hi Visual           guisp=NONE guifg=NONE    guibg=#111111 ctermfg=NONE ctermbg=240  gui=NONE cterm=NONE
+hi VisualNOS        guisp=NONE guifg=NONE    guibg=#111111 ctermfg=NONE ctermbg=240  gui=NONE cterm=NONE
 hi WarningMsg       guisp=NONE guifg=#ffff99 guibg=NONE    ctermfg=228  ctermbg=NONE gui=NONE cterm=NONE
 hi WildMenu         guisp=NONE guifg=#ffffff guibg=NONE    ctermfg=231  ctermbg=NONE gui=NONE cterm=NONE
 
 " major
 
-hi Normal     guisp=NONE guifg=#ffffff guibg=#100b12 ctermfg=231 ctermbg=233  gui=NONE cterm=NONE
+hi Normal     guisp=NONE guifg=#ffffff guibg=#000000 ctermfg=231 ctermbg=233  gui=NONE cterm=NONE
 hi Comment    guisp=NONE guifg=#808080 guibg=NONE    ctermfg=244 ctermbg=NONE gui=NONE cterm=NONE
 hi Constant   guisp=NONE guifg=#ff964f guibg=NONE    ctermfg=209 ctermbg=NONE gui=NONE cterm=NONE
 hi Identifier guisp=NONE guifg=#b198d9 guibg=NONE    ctermfg=140 ctermbg=NONE gui=NONE cterm=NONE

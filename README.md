@@ -6,5 +6,5 @@
 My [Neovim](https://neovim.io) config.
 
 ```
-    Syu neovim ripgrep
+    neovim ripgrep
 ```
