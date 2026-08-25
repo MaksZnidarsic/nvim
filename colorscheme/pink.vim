@@ -44,7 +44,7 @@ hi ModeMsg          guisp=NONE guifg=#ffffff guibg=NONE    ctermfg=231  ctermbg=
 hi MoreMsg          guisp=NONE guifg=#ffffff guibg=NONE    ctermfg=231  ctermbg=NONE gui=NONE cterm=NONE
 hi NonText          guisp=NONE guifg=#ffffff guibg=NONE    ctermfg=231  ctermbg=NONE gui=NONE cterm=NONE
 hi Pmenu            guisp=NONE guifg=#ffffff guibg=NONE    ctermfg=231  ctermbg=NONE gui=NONE cterm=NONE
-hi PmenuSel         guisp=NONE guifg=#ffffff guibg=NONE    ctermfg=231  ctermbg=NONE gui=NONE cterm=NONE
+hi PmenuSel         guisp=NONE guifg=#ff809f guibg=NONE    ctermfg=211  ctermbg=NONE gui=NONE cterm=NONE
 hi PmenuSbar        guisp=NONE guifg=#ffffff guibg=NONE    ctermfg=231  ctermbg=NONE gui=NONE cterm=NONE
 hi PmenuThumb       guisp=NONE guifg=#ffffff guibg=NONE    ctermfg=231  ctermbg=NONE gui=NONE cterm=NONE
 hi Question         guisp=NONE guifg=#ffffff guibg=NONE    ctermfg=231  ctermbg=NONE gui=NONE cterm=NONE
