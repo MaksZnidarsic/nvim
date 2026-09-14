@@ -6,11 +6,7 @@ vim.pack.add({
     'https://github.com/neovim/nvim-lspconfig',
     'https://github.com/williamboman/mason-lspconfig.nvim',
     'https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim.git',
-
-    'https://github.com/saghen/blink.cmp',
-    'https://github.com/saghen/blink.lib',
 })
-
 
 require('mason').setup()
 require('mason-lspconfig').setup()
@@ -18,6 +14,12 @@ require('mason-tool-installer').setup({
     ensure_installed = {
         'clangd', 'rust_analyzer', 'texlab', 'tinymist', 'ty'
     }
+})
+
+
+vim.pack.add({
+    'https://github.com/saghen/blink.lib',
+    'https://github.com/saghen/blink.cmp',
 })
 
 local cmp = require('blink.cmp')

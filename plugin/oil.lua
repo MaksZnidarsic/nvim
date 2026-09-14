@@ -15,7 +15,7 @@ require('oil').setup({
         "size"
     },
     keymaps = {
-        ["<C-CR>"] = "actions.open_external",
+        ["<c-cr>"] = "actions.open_external",
     }
 })
 
