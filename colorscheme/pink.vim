@@ -64,8 +64,8 @@ hi TabLineFill      guisp=NONE guifg=#ffffff guibg=NONE    ctermfg=231  ctermbg=
 hi TabLineSel       guisp=NONE guifg=#ffffff guibg=NONE    ctermfg=231  ctermbg=NONE gui=NONE cterm=NONE
 hi Terminal         guisp=NONE guifg=#ffffff guibg=NONE    ctermfg=231  ctermbg=NONE gui=NONE cterm=NONE
 hi Title            guisp=NONE guifg=#ffffff guibg=NONE    ctermfg=231  ctermbg=NONE gui=NONE cterm=NONE
-hi Visual           guisp=NONE guifg=NONE    guibg=#111111 ctermfg=NONE ctermbg=240  gui=NONE cterm=NONE
-hi VisualNOS        guisp=NONE guifg=NONE    guibg=#111111 ctermfg=NONE ctermbg=240  gui=NONE cterm=NONE
+hi Visual           guisp=NONE guifg=NONE    guibg=#252525 ctermfg=NONE ctermbg=240  gui=NONE cterm=NONE
+hi VisualNOS        guisp=NONE guifg=NONE    guibg=#585858 ctermfg=NONE ctermbg=240  gui=NONE cterm=NONE
 hi WarningMsg       guisp=NONE guifg=#ffff99 guibg=NONE    ctermfg=228  ctermbg=NONE gui=NONE cterm=NONE
 hi WildMenu         guisp=NONE guifg=#ffffff guibg=NONE    ctermfg=231  ctermbg=NONE gui=NONE cterm=NONE
 
@@ -92,7 +92,7 @@ hi Number         guisp=NONE guifg=#ff964f guibg=NONE ctermfg=209 ctermbg=NONE g
 hi Boolean        guisp=NONE guifg=#ff964f guibg=NONE ctermfg=209 ctermbg=NONE gui=italic cterm=italic
 hi Float          guisp=NONE guifg=#ff964f guibg=NONE ctermfg=209 ctermbg=NONE gui=NONE   cterm=NONE
 hi Function       guisp=NONE guifg=#b198d9 guibg=NONE ctermfg=140 ctermbg=NONE gui=NONE   cterm=NONE
-hi Conditional    guisp=NONE guifg=#ff8fab guibg=NONE ctermfg=211 ctermbg=NONE gui=italic cterm=italic
+hi Conditional    guisp=NONE guifg=#ff809f guibg=NONE ctermfg=211 ctermbg=NONE gui=italic cterm=italic
 hi Repeat         guisp=NONE guifg=#ff8fab guibg=NONE ctermfg=211 ctermbg=NONE gui=italic cterm=italic
 hi Label          guisp=NONE guifg=#ff809f guibg=NONE ctermfg=211 ctermbg=NONE gui=NONE   cterm=NONE
 hi Operator       guisp=NONE guifg=#b198d9 guibg=NONE ctermfg=140 ctermbg=NONE gui=NONE   cterm=NONE
@@ -107,6 +107,6 @@ hi Structure      guisp=NONE guifg=#ffff99 guibg=NONE ctermfg=228 ctermbg=NONE g
 hi Typedef        guisp=NONE guifg=#ff809f guibg=NONE ctermfg=211 ctermbg=NONE gui=NONE   cterm=NONE
 hi SpecialChar    guisp=NONE guifg=#b198d9 guibg=NONE ctermfg=140 ctermbg=NONE gui=NONE   cterm=NONE
 hi Tag            guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=NONE gui=NONE   cterm=NONE
-hi Delimiter      guisp=NONE guifg=#585858 guibg=NONE ctermfg=240 ctermbg=NONE gui=NONE   cterm=NONE
+hi Delimiter      guisp=NONE guifg=#808080 guibg=NONE ctermfg=240 ctermbg=NONE gui=NONE   cterm=NONE
 hi SpecialComment guisp=NONE guifg=#ffc5d3 guibg=NONE ctermfg=224 ctermbg=NONE gui=NONE   cterm=NONE
 hi Debug          guisp=NONE guifg=#ff746c guibg=NONE ctermfg=209 ctermbg=NONE gui=NONE   cterm=NONE
