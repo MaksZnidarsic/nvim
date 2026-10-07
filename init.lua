@@ -8,6 +8,5 @@
 -- /_/ /_/\___/\____/|___/_/_/ /_/ /_/ 
 
 
-require('colorscheme')
 require('keymaps')
 require('options')

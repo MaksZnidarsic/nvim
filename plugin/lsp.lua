@@ -12,7 +12,7 @@ require('mason').setup()
 require('mason-lspconfig').setup()
 require('mason-tool-installer').setup({
     ensure_installed = {
-        'clangd', 'rust_analyzer', 'texlab', 'tinymist', 'ty'
+        'clangd', 'emmylua_ls', 'rust_analyzer', 'texlab', 'tinymist', 'ty'
     }
 })
 

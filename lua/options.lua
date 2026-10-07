@@ -29,3 +29,6 @@ vim.opt.scrolloff = 15
 vim.opt.magic = true
 
 vim.opt.signcolumn = 'number'
+
+
+vim.cmd.colorscheme('pink')
