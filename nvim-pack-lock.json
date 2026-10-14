@@ -8,6 +8,14 @@
       "rev": "fd9a48ebbe6ec30d5dfcc5b42c243941ccdca1aa",
       "src": "https://github.com/saghen/blink.lib"
     },
+    "blueberry-peach.nvim": {
+      "rev": "cdd699789799258f82a377cd2f2a29a917f0702f",
+      "src": "https://github.com/schemar/blueberry-peach.nvim.git"
+    },
+    "kanagawa.nvim": {
+      "rev": "bb85e4bfc8d89b0e62c8fa53ccdd13d12e2f77b3",
+      "src": "https://github.com/rebelot/kanagawa.nvim.git"
+    },
     "mason-lspconfig.nvim": {
       "rev": "0c5d026dcd39bc3433be16a01395699cabbd1019",
       "src": "https://github.com/williamboman/mason-lspconfig.nvim"
@@ -35,6 +43,10 @@
     "telescope.nvim": {
       "rev": "40aedd8a68c78a656a10a8d62d80c54af59420fb",
       "src": "https://github.com/nvim-telescope/telescope.nvim"
+    },
+    "vague.nvim": {
+      "rev": "73f8aaa866bf3d14dd0b0ab9e48c11794c1cb7ab",
+      "src": "https://github.com/vague-theme/vague.nvim.git"
     }
   }
 }

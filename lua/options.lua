@@ -31,4 +31,4 @@ vim.opt.magic = true
 vim.opt.signcolumn = 'number'
 
 
-vim.cmd.colorscheme('pink')
+vim.cmd.colorscheme('purple-yellow')
