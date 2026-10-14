@@ -2,7 +2,6 @@
 
 
 config = require('color.config')
-groups = require('color.groups')
 
 local M = {}
 
@@ -11,10 +10,11 @@ function M.setup(opts)
     config.set(opts)
 end
 
-
 function M.colorscheme()
     if vim.g.colors_name then vim.cmd.highlight("clear") end
     vim.g.colors_name = "purple-yellow"
+
+    local groups = require('color.groups')
 
     for _, group in pairs(groups) do
         for hl, opts in pairs(group) do

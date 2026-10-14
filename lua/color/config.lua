@@ -3,7 +3,7 @@
 local M = {}
 
 local default = {
-    transparent = true,
+    transparent = false,
 
     italic = true,
     bold = true,
@@ -33,10 +33,8 @@ local default = {
 M.default = default
 M.current = default
 
-
 function M.set(opts)
     M.current = vim.tbl_deep_extend('force', vim.deepcopy(M.current), opts or {})
 end
-
 
 return M
