@@ -6,6 +6,10 @@ vim.pack.add({
     'https://github.com/neovim/nvim-lspconfig',
     'https://github.com/williamboman/mason-lspconfig.nvim',
     'https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim.git',
+
+    -- specific
+    'https://github.com/elkowar/yuck.vim',
+    'https://github.com/ajbucci/ipynb.nvim',
 })
 
 require('mason').setup()
@@ -34,6 +38,9 @@ cmp.setup({
         ['<c-space>'] = { 'select_and_accept', 'fallback' },
     }
 })
+
+
+require('ipynb').setup()
 
 
 -- options --

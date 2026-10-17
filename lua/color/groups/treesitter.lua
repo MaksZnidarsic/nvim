@@ -111,7 +111,7 @@ function M.colors(config)
         ['@markup.raw.block'] = { fg = c.fg },
         ['@markup.raw.delimiter.markdown'] = { fg = c.fg_subtle },
 
-        ['@markup.list'] = { fg = c.color4 },
+        ['@markup.list'] = { fg = c.color5 },
         ['@markup.list.checked'] = { fg = c.color5 },
         ['@markup.list.unchecked'] = { fg = c.color4 },
 
