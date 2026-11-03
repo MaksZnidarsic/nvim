@@ -9,7 +9,6 @@ vim.pack.add({
 
     -- specific
     'https://github.com/elkowar/yuck.vim',
-    'https://github.com/ajbucci/ipynb.nvim',
 })
 
 require('mason').setup()
@@ -38,9 +37,6 @@ cmp.setup({
         ['<c-space>'] = { 'select_and_accept', 'fallback' },
     }
 })
-
-
-require('ipynb').setup()
 
 
 -- options --

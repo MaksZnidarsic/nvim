@@ -16,7 +16,7 @@ function M.colors(config)
         --Debug              = { fg = c.constant },
         --debugPC            = { fg = c.bg, bg = c.fg },
         --debugBreakpoint    = { fg = c.bg, bg = c.operator },
-        Directory          = { fg = c.color2 },
+        Directory          = { fg = c.color2, bold = config.bold },
         OkMsg              = { fg = c.ok },
         ErrorMsg           = { fg = c.error },
         FloatTitle         = { link = 'NormalFloat' },

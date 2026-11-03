@@ -39,15 +39,15 @@ function M.colors(config)
         ['@float'] = { link = 'Number' },
 
         ['@type'] = { link = 'Structure' },
-        ['@type.builtin'] = { link = 'Structure' },
+        ['@type.builtin'] = { fg = c.color4, bold = config.bold },
         --['@type.definition'] = {},
 
         ['@attribute'] = { link = 'Keyword' },
-        ['@attribute.builtin'] = { link = 'Keyword' },
+        ['@attribute.builtin'] = { fg = c.color2, bold = config.bold },
         ['@property'] = { link = 'Identifier' },
 
         ['@function'] = { link = 'Function' },
-        ['@function.builtin'] = { link = 'Function', bold = config.bold },
+        ['@function.builtin'] = { fg = c.color3, bold = config.bold },
         ['@function.call'] = { link = 'Function' },
         ['@function.macro'] = { link = 'Function' },
 
