@@ -32,5 +32,7 @@ vim.opt.signcolumn = 'number'
 
 vim.opt.termguicolors = true
 
+vim.opt.mouse = ''
+
 
 vim.cmd.colorscheme('purple-yellow')
